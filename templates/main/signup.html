@@ -1,0 +1,73 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg" sizes="32x32" href="{% static '/images/site-logo.svg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="{% sass_src './scss/scss/style.scss' %}" rel="stylesheet" type="text/css" />
+
+    <title>HIRE</title>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: hsl(220, 16%, 96%) !important;
+        }
+    </style>
+
+</head>
+<body>
+
+    <section class="signup">
+
+        <div class="signup__form flex flex-col">
+
+            <h1>HIRE</h1>
+
+            <form method="post" action=".">
+
+                {% for message in messages %}
+                <p class="signup__error">{{message}}</p>
+                {% endfor %}
+
+                {% csrf_token %}
+        
+                <input type="email" id="user_id"placeholder="email" name="user_id">
+            
+                <input type="text" id="name" placeholder="name" name="name">
+            
+                <input type="password" id="password" placeholder="password" name="password">
+            
+                <input type="password"id="re_password" placeholder="check password" name="re_password">
+
+                <div class="flex flex-jc-sb">
+                    <div class="signup__select">
+                        <select name="school" id="school">
+                            <option selected disabled>choose your school</option>
+                            <option value="Korean International School">Korean International School</option>
+                            <option value="North London Collegiate School">North London Collegiate School</option>
+                            <option value="Saint Johnsbury Academy">Saint Johnsbury Academy</option>
+                            <option value="Branksome Hall Asia">Branksome Hall Asia</option>
+                        </select>
+                    </div>
+
+                    <input type="date" id="date_of_birth" data-placeholder="your birthday" name="date_of_birth" required>
+                </div>
+
+                <input type="submit" value="Sign Up">
+            
+            </form>
+
+        </div>
+    </section>
+
+</body>

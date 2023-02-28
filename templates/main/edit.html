@@ -1,0 +1,71 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<section class="edit">
+
+    <div class="container container--pall flex flex-col">
+        
+        <form action="{% url 'edit' %}" method="post">
+            {% csrf_token %}
+            <div>
+                <h1>
+                    Introduce yourself
+                </h1>
+
+                <h2>
+                    - Write about your passion, ability, and skills
+                    <br>
+                    - Write about your values
+                </h2>
+
+                <input type="text" id="intro" name="intro" placeholder="Write your response(3 ~ 6 sentences recommended)" value={{info.intro}}>
+            </div>
+        
+            <div>
+                <h1>
+                    Your Skills
+                </h1>
+
+                <h2>
+                    - Write about your skills: design tools, development stack, marketing tool…etc
+                    <br>
+                    - Languages
+                </h2>
+
+                <input type="text" id="skills" name="skills" placeholder="Write your response(3 ~ 6 sentences recommended)" value={{info.skills}}>
+            </div>
+        
+            <div>
+                <h1>
+                    Experience
+                </h1>
+
+                <h2>
+                    - Write about your experience in the field of your interest
+                    <br>
+                    - If you do not have an experience, write “new”
+                </h2>
+
+                <input type="text" id="experience" name="experience" placeholder="Write your response(3 ~ 6 sentences recommended)" value={{info.experience}}>
+            </div>
+        
+            <div>
+                <h1>
+                    Initiatives
+                </h1>
+
+                <h2>
+                    - Leave a link to your portfolio(any kind) that shows your accomplishments 
+                </h2>
+
+                <input type="text" id="initiatives" name="initiatives" placeholder="Attach the link" value={{info.initiatives}}>
+            </div>
+
+            <input type="submit" value="Update">
+        </form>
+    </div>
+
+</section>
+
+{% endblock %}

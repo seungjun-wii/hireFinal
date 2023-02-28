@@ -1,0 +1,31 @@
+.infoC {
+
+    background: $lightBlue;
+
+    &__box {
+        display: flex;
+
+        p {
+            font-size: 1rem;
+            width: 62%;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            color: $darkBlue;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__boxText {
+        width: 100%;
+        background: $white;
+        padding-top: 26px;
+        padding-right: 22px;
+        padding-bottom: 40px;
+        padding-left: 22px;
+
+        line-height: 1.9;
+    }
+
+}

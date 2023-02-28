@@ -1,0 +1,37 @@
+{% extends 'index.html'%}
+
+{% block content %}
+
+    <section class="profile">
+
+        <div class="flex flex-jc-sb container container--pall">
+
+            <div class="profile__summary flex flex-jc-sb container--pall">
+                <div class="profile__text">
+                    <h2>
+                        {{name}}
+                    </h2>
+    
+                    <p>
+                        Email: {{user}}
+                        <br>
+                        School: {{school}}
+                        <br>
+                        Birthday: {{birthday}}
+                    </p>
+                </div>
+                
+                <a href="edit" class="button">Edit</a>
+            </div>
+
+            <div class="profile__button">
+                <a href="#" class="button b1">Check Application Status</a>
+            
+                <a href="/logout" class="button b2">Log Out</a>
+            </div>
+
+        </div>
+
+    </section>
+
+{% endblock %}

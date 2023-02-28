@@ -1,0 +1,127 @@
+.signup {
+
+    p {
+        color: #615f63;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 0.9375rem;
+        text-align: center;
+    }
+
+    &__error {
+        border: 1px solid red;
+        border-radius: 3px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(255, 129, 130, 0.3);
+    }
+
+    &__form {
+
+        background: $white;
+        border-radius: 10px;
+        width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 60px 70px 60px 70px;
+
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        height: 40px;
+        background: $white;
+        border: none;
+        border-bottom: 1px solid $grayishBlue;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $gray;
+        line-height: 1.3; 
+        margin-bottom: 20px;
+    }
+
+    input[type=submit] {
+        padding: 0.865rem 2.7rem;
+        background-color: $birghtCyan;
+        border: 1px solid $birghtCyan;
+        cursor: pointer;
+        color: $white;
+        font-weight: 400;
+        font-size: $font-sm;
+        transition: opacity 300ms ease-in-out;
+        line-height: 1.3; 
+        font-family: 'Outfit', sans-serif;
+
+        &:hover {
+            opacity: 0.75;
+        }
+
+        text-align: center;
+        border-radius: 5px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+        width: 100%;
+    }
+
+    input[type=date] {
+        position: relative;
+        border: none;
+        border-bottom: 1px solid $grayishBlue;
+        display: block;
+        outline: none;
+        padding: 12px;
+        padding-top: 7px;
+        align-self: center;
+        width: 100%;
+
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $gray;
+        line-height: 1.3; 
+    }
+
+    input[type=date]::-webkit-calendar-picker-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        color: transparent;
+        cursor: pointer;
+    }
+
+    input[type=date]::before {
+        content: attr(data-placeholder);
+        width: 100%;
+    }
+
+    input[type=date]:valid::before {
+        display: none;
+    }
+
+    &__select {
+        align-self: flex-end;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    select {
+        width: 13rem;
+        background: $white;
+        border: none;
+        border-bottom: 1px solid $grayishBlue;
+        font-family: 'Outfit', sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $gray;
+        line-height: 1.3; 
+        padding-bottom: 13px;
+        appearance: none;
+    }    
+}

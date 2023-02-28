@@ -1,0 +1,55 @@
+.profile {
+
+    background-color: $lightBlue;
+    min-height: calc(100vh - 81.87px - 169.27px);
+
+    &__summary {
+        background: $white;
+        border-radius: 3.125rem;
+        width: 45rem;
+
+        padding-top: 2.5rem;
+        padding-right: 3.75rem;
+        padding-bottom: 2.5rem;
+        padding-left: 3.75rem;
+
+        a {
+            height: 3rem;
+            align-self: end;
+        }
+    }
+
+    &__text {
+
+        h2 {
+            color: $darkBlue;
+            font-size: 1.45rem;
+        }
+
+        p {
+            color: $darkBlue;
+            font-size: 1.25rem;
+        }
+
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: column;
+
+        .b1 {
+            background-color: $white;
+            border: 1px solid $white;
+            color: $darkBlue;
+            font-size: 1rem;
+        }
+
+        .b2 {
+            background-color: $red;
+            border: 1px solid $red;
+            font-size: 1rem;
+            align-self: flex-end;
+            margin-top: 20px;
+        }
+    }
+}

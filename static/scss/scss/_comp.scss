@@ -1,0 +1,22 @@
+.comp {
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    h2 {
+        color: $darkBlue;
+    }
+
+    p {
+        color: $darkBlue;
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        width: fit-content;
+        align-self: end;
+    }
+}

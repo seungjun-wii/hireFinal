@@ -1,0 +1,24 @@
+.infoH {
+
+    p {
+        display: inline-block;
+        background: $lightBlue;
+        font-size: 1.25rem;
+        letter-spacing: 0.1px;
+        padding: 15px 40px 15px 40px;
+        border-radius: 50px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    span {
+        width: 7px;
+        height: 30px;
+        background: $cyan;
+    }
+
+    &__text {
+        display: grid;
+        place-items: center;
+    }
+}

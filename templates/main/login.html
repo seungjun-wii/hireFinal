@@ -1,0 +1,57 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/svg" sizes="32x32" href="{% static '/images/site-logo.svg' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link href="{% sass_src './scss/scss/style.scss' %}" rel="stylesheet" type="text/css" />
+
+    <title>HIRE</title>
+
+    <style>
+        body,
+        html {
+            height: 100%;
+            background-color: hsl(220, 16%, 96%) !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="loginP">
+
+        <div class="loginP__login flex flex-col">
+
+            <h1>HIRE</h1>
+
+            <form method="POST" action="{% url 'login' %}">
+
+                {% for message in messages %}
+                    <p class="loginP__error">Incorrect username or password.</p>
+                {% endfor %}
+
+                {% csrf_token %}
+                <input type="text" id="usernmae" name="username" placeholder="Email">
+                <input type="password" id="password" name="password" placeholder="Password">
+
+                <input type="submit" value="Log In">
+
+            </form>
+
+            <a href="/signup" class="signin">Sign Up</a>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>

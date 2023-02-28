@@ -1,0 +1,88 @@
+.compInfo {
+
+    background-color: $lightBlue;
+
+    h1 {
+        padding-bottom: 3.375rem;
+    }
+
+    h2 {
+        color: $blue;
+        font-size: 20px;
+    }
+
+    p {
+        color: $blue;
+        margin-bottom: 0;
+    }
+
+    &__box {
+
+        padding-top: 0;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4.875rem;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    &__comp {
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 4px 12px 30px 6px rgba(0, 0, 0, 0.09);
+
+        &:hover {
+            transition: all .3s ease;
+            transform: translateY(-5px);
+        }
+    }
+
+    &__image {
+        height: 13rem;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    &__text {
+
+        padding: 20px;
+    }
+
+    &__categories {
+
+        padding-top: 0;
+
+        .button {
+            color: $gray;
+            margin-right: 20px;
+            background-color: white;
+            border-color: $gray;
+        }
+    }
+
+    &__msg {
+
+        padding-top: 0;
+
+        h1 {
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 0;
+        }
+
+        p {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .buttom {
+            align-self: center;
+        }
+
+    }
+
+}

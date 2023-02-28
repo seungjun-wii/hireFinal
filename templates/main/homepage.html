@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <section class="hero container">
+        <div class="hero__image">
+
+        </div>
+
+        <div class="hero__text container--pall">
+
+            {% if user.is_authenticated %}
+                <h1>Hello {{user.name}}</h1>
+
+                <p>
+                    Experience and Listen with HIRE
+                </p>
+
+                <a href="/opportunity" class="button hero__cta">Get Started</a>
+            {% else %}
+                <h1>
+                    Explore the World
+                </h1>
+
+                <p>
+                    Are you living a meaningful life?
+                </p>
+
+                <a href="/login" class="button hero__cta">Get Started</a>
+            {% endif %}
+        </div>
+
+    </section>
+
+    <section class="infoH container container--pall">
+
+        <h1>
+            Do you...
+        </h1>
+
+        <div class="infoH__text">
+
+            <p>😥 Spend entire vacation at hagwon preparing for SAT?</p>
+            <span></span>
+            <p>😥 Do activities that seem like to impress admission officers?</p>
+            <span></span>
+            <p>😥 Work hard academically but doesn't know what you're interested in?</p>
+    
+        </div>
+    </section>
+
+    <section class="partners container container--pall">
+        <h1>
+            We work with...
+        </h1>
+
+        <img src="/static/images/wadiz_logo.svg" alt="wadiz_logo">
+    </section>
+
+{% endblock %}

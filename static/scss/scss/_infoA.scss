@@ -1,0 +1,61 @@
+.infoA {
+
+    background: $lightBlue;
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 1.3125rem;
+    }
+
+    // Needs for the mobile version of the website
+    &__intro {
+        padding-bottom: 2.375rem;
+    }
+
+    &__box {
+
+        display: flex;
+        height: 350px;
+
+        p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+        
+        h2 {
+            color: $darkBlue;
+        }
+    }
+
+    &__box1 {
+        display: block;
+        width: 90%;
+    }
+
+    &__box2 {
+        display: block;
+        align-self: flex-end;
+
+    }
+
+    &__gap {
+        width: 5.3125rem;
+        height: 0.5rem;
+        transform: translateY(15rem);
+        background-color: $cyan;
+    }
+
+    &__text {
+        background: $white;
+        padding-top: 26px;
+        padding-right: 22px;
+        padding-bottom: 26px;
+        padding-left: 22px;
+
+        line-height: 1.9;
+    }
+
+}
