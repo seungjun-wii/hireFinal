@@ -14,7 +14,7 @@ def home(request):
 def about(response):
     return render(response, "main/about.html", {})
 
-def opport(response):
+def opportExc(response):
     return render(response, "main/opportExc.html", {})
 
 def opportUniv(response):
