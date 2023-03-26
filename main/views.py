@@ -15,9 +15,6 @@ def about(response):
     return render(response, "main/about.html", {})
 
 def opport(response):
-    return render(response, "main/opport.html", {})
-
-def opportExc(response):
     return render(response, "main/opportExc.html", {})
 
 def opportUniv(response):
@@ -51,7 +48,7 @@ def edit(request):
         return render(request, "main/edit.html", {"info": user})
 
 def company1(response):
-    return render(response, "main/comp.html", {})
+    return render(response, "main/comp1.html", {})
 
 def signup(request):
     if request.method == "POST":
